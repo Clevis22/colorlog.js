@@ -81,7 +81,7 @@ Logs an error message to the console with custom properties. Parameters are the 
 
 ## Examples
 
-For more examples of how to use **colorlog.js**, please refer to the [Examples](examples.md) page.
+For more examples of how to use **colorlog.js**, please refer to the demo folder.
 
 ---
 
