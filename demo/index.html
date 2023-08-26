@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorLog Example</title>
+    <script src="src/colorlog.js"></script>
+</head>
+<body>
+     <script>
+        // Use the extended colorlog functions with additional parameters
+        colorlog('This is a regular message', 'black', null, null);
+        colorlog.info('This is an informational message', 'blue', '20px', null);
+        colorlog.success('This is a success message', 'green', '18px', null);
+        colorlog.warn('This is a warning message', 'yellow', null, null);
+        colorlog.error('This is an error message', 'red', null, true);
+    </script>
+</body>
+</html>
