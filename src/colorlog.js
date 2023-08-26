@@ -6,6 +6,11 @@ function formatTimestamp() {
 }
 
 function colorlog(text, color, textSize = 'inherit', backgroundColor = 'transparent', showTimestamp = false) {
+    if (!text || !color) {
+        console.error('colorlog: Missing required parameters.');
+        return;
+    }
+
     const timestamp = showTimestamp ? `[${formatTimestamp()}] ` : '';
     console.log(`%c${timestamp}${text}`, `color: ${color}; font-size: ${textSize}; background-color: ${backgroundColor}`);
 }
@@ -19,10 +24,20 @@ colorlog.success = function (text, color, textSize = 'inherit', backgroundColor 
 };
 
 colorlog.warn = function (text, color, textSize = 'inherit', backgroundColor = 'transparent', showTimestamp = false) {
+    if (!text || !color) {
+        console.error('colorlog.warn: Missing required parameters.');
+        return;
+    }
+
     console.warn(`%c[${formatTimestamp()}] ${text}`, `color: ${color}; font-size: ${textSize}; background-color: ${backgroundColor}`);
 };
 
 colorlog.error = function (text, color, textSize = 'inherit', backgroundColor = 'transparent', showTimestamp = false) {
+    if (!text || !color) {
+        console.error('colorlog.error: Missing required parameters.');
+        return;
+    }
+
     console.error(`%c[${formatTimestamp()}] ${text}`, `color: ${color}; font-size: ${textSize}; background-color: ${backgroundColor}`);
 };
 
